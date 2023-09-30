@@ -10,6 +10,12 @@ body{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
 }
 
+.headerIMG{
+    height: 60px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
 nav.header{
     background: #FFB8FF;
     height: 80px;
@@ -27,6 +33,7 @@ label.logo{
     font-size: 35px;
     line-height: 80px;
     padding: 0 100px;
+    padding-bottom: 20px;
     font-weight: bold;
 }
 
