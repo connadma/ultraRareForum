@@ -16,6 +16,18 @@ body{
     padding-left: 20px;
 }
 
+.homeBody{
+    color: #B8B8B8;
+    font-size: 24px; 
+    max-width: 1200px;
+}
+
+.emailBody{
+    color: #B8B8B8;
+    font-size: 24px; 
+    max-width: 1200px;
+}
+
 nav.header{
     background: #FFB8FF;
     height: 80px;
@@ -26,6 +38,10 @@ nav.footer{
     background: #FFB8FF;
     height: 20px;
     width: 100%;
+}
+
+.footerText{
+    color: #6DBFBF;
 }
 
 label.logo{
@@ -41,8 +57,14 @@ label.bh {
     color: #B8B8B8;
     font-size: 35px;
     line-height: 80px;
-    padding: 0 100px;
     font-weight: bold;
+}
+
+label.ebh {
+    font-size: 30px;
+    line-height: 80px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 nav ul{
@@ -67,6 +89,10 @@ nav ul li a{
 a.active, a:hover{
     background-color: #6DBFBF;
     transition: .5s;
+}
+
+.hr{
+    visibility: hidden;
 }
 
 @media (max-width: 952px){
@@ -107,8 +133,33 @@ a.active, a:hover{
     }
 }
 
-section{
+section.hMain{
     background: url(homeBackGround.jpg) no-repeat;
     background-size: cover;
     height: calc(100vh - 80px - 20px);
+    padding: 0 100px;
+}
+
+section.eMain{
+    background: url(emailBackGround.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 100px);
+    padding: 0 100px;
+}
+
+section.iMain{
+    background: url(infoBackGround.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 100px);
+    padding: 0 100px;
+}
+
+.emailBody{
+    width: 90%;
+    height: 400px;
+    box-sizing: border-box;
+}
+
+button.send{
+    margin-top: 5px;
 }
