@@ -19,7 +19,7 @@ body{
 .homeBody{
     color: #B8B8B8;
     font-size: 24px; 
-    max-width: 1200px;
+    max-width: 950px;
 }
 
 .emailBody{
@@ -188,4 +188,12 @@ section.iMain{
 
 button.send{
     margin-top: 5px;
+}
+
+.error {
+    background: #F2DEDE;
+    color: #A94442;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
 }
