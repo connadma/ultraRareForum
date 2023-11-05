@@ -1,8 +1,5 @@
 <?php
 
-//phpinfo();
-
-
 $sname = "localhost";
 $uname = "root";
 $password = "";

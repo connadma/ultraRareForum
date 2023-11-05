@@ -49,6 +49,13 @@ nav.footer{
     color: #6DBFBF;
 }
 
+nav.forumFooter {
+    background: #FFB8FF;
+    height: 20px;
+    width: 100%;
+    position: fixed;
+}
+
 label.logo{
     color: #6DBFBF;
     font-size: 35px;
@@ -105,19 +112,7 @@ a.active, a:hover{
     padding-bottom: 15px;
     visibility: hidden;
 }
-/*
-@media (max-width: 952px){
-    label.logo{
-        font-size: 30px;
-        padding-left: 50px;
-    }
-    nav ul li a{
-        font-size: 16px;
-    }
-}
-*/
 
-/* @media (max-width: 858px){ */
 @media (max-width: 858px){
     ul{
         position: fixed;
@@ -154,10 +149,21 @@ section.hMain{
 }
 
 section.eMain{
-    background: url(backGrounds/emailBackGround.jpg) no-repeat;
+    /*background: #212523;
     background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;*/
     height: calc(100vh - 100px);
     padding: 0 100px;
+    flex-direction: column;
+}
+
+section.fMain {
+    background: #212523;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 0 30%;
 }
 
 section.iMain{
@@ -196,4 +202,89 @@ button.send{
     padding: 10px;
     width: 95%;
     border-radius: 5px;
+}
+
+.loggedIn {
+    background: #D4EDDA;
+    color: #40754C;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+}
+
+a.logoutButton {
+    background: #555;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+}
+
+a.logoutButton:hover {
+    opacity: .7;
+}
+
+.success {
+    background: #D4EDDA;
+    color: #40754C;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+}
+
+.container {
+    background: white;
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 1px;
+    padding-bottom: 5px;
+}
+
+.comment, .reply {
+    margin-top: 5px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.reply {
+    border: 1px solid #ccc;
+}
+
+.emailSubHead {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #C4B437;
+}
+
+.forumForm {
+    margin: 10px;
+}
+
+form h3 {
+    margin-bottom: 5px;
+}
+
+.forumInput {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.forumSubmit {
+    background: #FFB8FF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+button.reply {
+    background: #6DBFBF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 100%;
+    background: #C4B437
 }

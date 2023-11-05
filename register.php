@@ -13,35 +13,37 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a class="active" href="#">Login/Register</a></li>
-                <li><a href="forum.php">Forum</a></li>
+                <li><a href="dropUsALine.html">Drop Us A Line</a></li>
                 <li><a href="info.html">Dates/Info</a></li>
             </ul>
         </nav>
         <section class="lMain">
-            <form action="loginAction.php" method="post">
+            <form action="registerAction.php" method="post">
                 <hr class="hrPad">
-                <p class="iBody">Login</p>
+                <p class="iBody">Register</p>
                 <hr class="hrPad">
 
                 <?php if (isset($_GET['error']) && !isset($_SESSION['username'])) { ?>
                     <p class="error"><?php echo $_GET['error']; ?></p>
                 <?php } ?>
 
-                <?php if (isset($_SESSION['username'])) { ?>
-                    <p class="loggedIn"><?php echo $_SESSION['username'] . " you are logged in"; ?></p>
-                    <hr class="hrPad">
-                    <a class="logoutButton" href="logout.php">Logout</a>
+                <?php if (isset($_GET['success'])) { ?>
+                    <p class="success"><?php echo $_GET['success']; ?></p>
                 <?php } ?>
 
+                <hr class="hrPad">
+                <input type="text" id="useremail" name="email" class="loginField" placeholder="email">
                 <hr class="hrPad">
                 <input type="text" id="username" name="username" class="loginField" placeholder="username">
                 <hr class="hrPad">
                 <input type="password" id="password" name="password" class="loginField" placeholder="password">
                 <hr class="hrPad">
-                <button type="submit" class="send">Login</button> 
+                <input type="password" id="reTypePassword" name="re_password" class="loginField" placeholder="retype password">
                 <hr class="hrPad">
+                <button type="submit" class="send">Register</button> 
             </form>
-            <a href="register.php">Don't have an account? Register here.</a>
+            <hr class="hrPad">
+            <a href="login.php">Already have an account? Sign in here.</a>
         </section>
         <nav class="footer">
             <label class="footerText">Ultra Rare Productions Built by Connor Adamy</label>
