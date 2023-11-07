@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <?php 
 session_start();
 $sname = "dfkpczjgmpvkugnb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
@@ -21,6 +23,7 @@ if (isset($_POST["submit"])) {
     mysqli_query($conn, $query);
 }
 ?>
+
 <html>
     <header>
         <title>Ultra Rare Productions</title>
