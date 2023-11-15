@@ -28,7 +28,8 @@ if (isset($_POST["submit"])) {
     <header>
         <title>Ultra Rare Productions</title>
         <meta name="viewport" content="width=device-width, intial-scale=1.0">
-        <link rel="stylesheet" href="home.css">
+        <!--<link rel="stylesheet" href="home.css">-->
+        <link rel="stylesheet" href="forum.css">
         <link rel="icon" type="image/jpg" href="backGrounds/favicon.jpg" sizes="16x16">
     </header>
     <body>

@@ -1,0 +1,180 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
+}
+
+.headerIMG{
+    height: 60px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+nav.header{
+    background: #FFB8FF;
+    height: 80px;
+    width: 100%;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: #C4B437;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active, a:hover{
+    background-color: #6DBFBF;
+    transition: .5s;
+}
+
+@media (max-width: 858px){
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #56F2F5;
+        top: 80px;
+        left: 0;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a.active, a:hover{
+        background: none;
+        color: #646047;
+    }
+    label.logo{
+        text-align: center;
+    }
+}
+
+nav.footer{
+    background: #FFB8FF;
+    height: 20px;
+    width: 100%;
+}
+
+.footerText{
+    color: #6DBFBF;
+}
+
+/*
+nav.forumFooter {
+    background: #FFB8FF;
+    height: 20px;
+    width: 100%;
+    position: fixed;
+}
+*/
+
+label.logo{
+    color: #6DBFBF;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+label.ebh {
+    color: #6DBFBF;
+    font-size: 30px;
+    line-height: 80px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.hr{
+    visibility: hidden;
+}
+
+section.fMain {
+    background: #212523;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 0 30%;
+}
+
+.container {
+    background: white;
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 1px;
+    padding-bottom: 5px;
+}
+
+.comment, .reply {
+    margin-top: 5px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.reply {
+    border: 1px solid #ccc;
+}
+
+.emailSubHead {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #C4B437;
+}
+
+.forumForm {
+    margin: 10px;
+}
+
+form h3 {
+    margin-bottom: 5px;
+}
+
+.forumInput {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.forumSubmit {
+    background: #FFB8FF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+button.reply {
+    background: #6DBFBF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 100%;
+    background: #C4B437
+}
