@@ -22,7 +22,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         exit();
     } else {
         $hashedPass = hash('sha256', $pass);
-        $pass64 = substr($hashedPass, 0, 64);
+        $pass50 = substr($hashedPass, 0, 50);
         //$hashedPass = hash('sha256', $pass);
         //substr($originalString, 0, 64);
     
@@ -32,10 +32,10 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         if ($result) {
             $row = mysqli_fetch_assoc($result);
 
-            $_SESSION['debugHashedPass'] = $pass64; //
+            $_SESSION['debugHashedPass'] = $pass50; //
             $_SESSION['debugRowPass'] = $row['password']; //
 
-            if ($row['password'] == $pass64) {
+            if ($row['password'] == $pass50) {
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['email'] = $row['email'];
                 $_SESSION['id'] = $row['id'];
