@@ -32,7 +32,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['re_p
     } else if ($pass !== $re_pass) {
         header("Location: register.php?error=The confirmation password does not match&$user_data");
     } else {
-        $pass = md5($pass);
+        $pass = hash('sha256', $pass);
 
         $sql = "SELECT * FROM users WHERE username='$username'";
         $result = mysqli_query($conn, $sql);
