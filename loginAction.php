@@ -37,6 +37,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 exit();
             } else {
                     header("Location: login.php?error=Incorrect Username or Password");
+                    echo($row['password']); //
+                    echo("\n"); //
+                    echo($hashedPass); //
                     exit();
             }
         } else {
