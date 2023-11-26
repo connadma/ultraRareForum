@@ -29,7 +29,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         if ($result) {
             $row = mysqli_fetch_assoc($result);
 
-            if ($row && hash_equals($row['password'], $hashedPass)) {
+            if (hash_equals($row['password'], $hashedPass)) {
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['email'] = $row['email'];
                 $_SESSION['id'] = $row['id'];
