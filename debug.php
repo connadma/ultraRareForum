@@ -6,6 +6,9 @@ $hashedPass = $_SESSION['debugHashedPass'];
 $rowPass = $_SESSION['debugRowPass'];
 
 echo($hashedPass);
+?>
+<hr></hr>
+<?php
 echo("\n");
 echo($rowPass);
 
