@@ -29,6 +29,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         if ($result) {
             $row = mysqli_fetch_assoc($result);
 
+            $_SESSION['debugHashedPass'] = $hashedPass; //
+            $_SESSION['debugRowPass'] = $row['password']; //
+
             if (hash_equals($row['password'], $hashedPass)) {
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['email'] = $row['email'];
@@ -36,10 +39,8 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 header("Location: login.php");
                 exit();
             } else {
-                    header("Location: login.php?error=Incorrect Username or Password");
-                    echo($row['password']); //
-                    echo("\n"); //
-                    echo($hashedPass); //
+                    header("Location: debug.php"); //
+                    //header("Location: login.php?error=Incorrect Username or Password");
                     exit();
             }
         } else {
