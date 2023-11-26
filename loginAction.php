@@ -21,7 +21,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         header("Location: login.php?error=Password is required");
         exit();
     } else {
-        $hashedPass = hash('sha256', $pass);
+        $hashedPass = substr(hash('sha256', $pass), 0, 64);
+        //$hashedPass = hash('sha256', $pass);
+        //substr($originalString, 0, 64);
     
         $sql = "SELECT * FROM users WHERE username='$username'";
         $result = mysqli_query($conn, $sql);
