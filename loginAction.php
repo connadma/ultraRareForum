@@ -21,7 +21,8 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         header("Location: login.php?error=Password is required");
         exit();
     } else {
-        $hashedPass = substr(hash('sha256', $pass), 0, 64);
+        $hashedPass = hash('sha256', $pass);
+        $pass64 = substr($hashedPass, 0, 64);
         //$hashedPass = hash('sha256', $pass);
         //substr($originalString, 0, 64);
     
@@ -31,10 +32,10 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         if ($result) {
             $row = mysqli_fetch_assoc($result);
 
-            $_SESSION['debugHashedPass'] = $hashedPass; //
+            $_SESSION['debugHashedPass'] = $pass64; //
             $_SESSION['debugRowPass'] = $row['password']; //
 
-            if ($row['password'] == $hashedPass) {
+            if ($row['password'] == $pass64) {
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['email'] = $row['email'];
                 $_SESSION['id'] = $row['id'];
