@@ -34,7 +34,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             $_SESSION['debugHashedPass'] = $hashedPass; //
             $_SESSION['debugRowPass'] = $row['password']; //
 
-            if (hash_equals($row['password'], $hashedPass)) {
+            if ($row['password'] == $hashedPass) {
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['email'] = $row['email'];
                 $_SESSION['id'] = $row['id'];
