@@ -23,17 +23,12 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     } else {
         $hashedPass = hash('sha256', $pass);
         $pass50 = substr($hashedPass, 0, 50);
-        //$hashedPass = hash('sha256', $pass);
-        //substr($originalString, 0, 64);
     
         $sql = "SELECT * FROM users WHERE username='$username'";
         $result = mysqli_query($conn, $sql);
 
         if ($result) {
             $row = mysqli_fetch_assoc($result);
-
-            $_SESSION['debugHashedPass'] = $pass50; //
-            $_SESSION['debugRowPass'] = $row['password']; //
 
             if ($row['password'] == $pass50) {
                 $_SESSION['username'] = $row['username'];
@@ -42,12 +37,11 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 header("Location: login.php");
                 exit();
             } else {
-                    header("Location: debug.php"); //
-                    //header("Location: login.php?error=Incorrect Username or Password");
+                    header("Location: login.php?error=Incorrect Username or Password");
                     exit();
             }
         } else {
-            header("Location: login.php?error=Database error");
+            header("Location: login.php?error=Incorrect Username or Password");
             exit();
         }
     }
