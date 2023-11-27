@@ -56,8 +56,16 @@ nav.forumFooter {
     position: fixed;
 }
 
+@font-face {
+    font-family: 'Celtic Garamond the 2nd';
+    src: url('CELTG___.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 label.logo{
     color: #6DBFBF;
+    font-family: 'Celtic Garamond the 2nd', sans-serif;
     font-size: 35px;
     line-height: 80px;
     padding: 0 100px;
