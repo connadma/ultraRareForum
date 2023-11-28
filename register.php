@@ -41,7 +41,8 @@
                 <hr class="hrPad">
                 <input type="password" id="reTypePassword" name="re_password" class="loginField" placeholder="retype password">
                 <hr class="hrPad">
-
+                
+                <p id="passwordMatch"></p>
                 <script>
                     $(document).ready(function () {
                         $('#reTypePassword').on('input', function () {
