@@ -45,7 +45,7 @@
                 <script>
                     $(document).ready(function () {
                         $('#reTypePassword').on('input', function () {
-                            var password = $('password').val();
+                            var password = $('#password').val();
                             var reTypePassword = $(this).val();
 
                             if (password === reTypePassword) {
