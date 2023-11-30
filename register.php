@@ -14,7 +14,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a class="active" href="#">Login/Register</a></li>
-                <li><a href="dropUsALine.html">Drop Us A Line</a></li>
+                <li><a href="forum.php">Forum</a></li>
                 <li><a href="info.html">Dates/Info</a></li>
             </ul>
         </nav>
